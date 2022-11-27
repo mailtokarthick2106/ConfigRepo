@@ -3,7 +3,7 @@ sources:
  - name: source1
    url: https://source1.com/v1/api/employee/validateId
  - name: source2
-   url: https://source2.com/v2/api/employee/validateId     
+   url: https://source2.com/v2/api/employees/validateId     
     
 
 #-----Logging Configuration------#    
