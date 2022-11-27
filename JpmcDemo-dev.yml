@@ -1,0 +1,40 @@
+#------Datasource Details----------#  
+sources:
+ - name: source1
+   url: https://source1.com/v1/api/employee/validateId
+ - name: source2
+   url: https://source2.com/v2/api/employee/validateId     
+    
+
+#-----Logging Configuration------#    
+logging:
+  level:
+    org.springframework: WARN
+    com.example.demo: DEBUG
+
+    
+ #-----Retry Configuration----#       
+retryConfig:
+  count:
+    source: 2
+  backOffDelay:
+    source: 100   
+    
+ #-----Async Configuration-------#
+asyncConfig:
+  maxPoolSize: '100'
+  corePoolSize: '7'
+  queueCapacity: '70'  
+
+#------Rest Template Configurations------#  
+rest:
+  connectionTimeout: 1000
+  readTimeout: 1000              
+
+#-----Actuator Configurations-------#  
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*' 
